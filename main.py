@@ -1,15 +1,20 @@
-from base64 import standard_b64decode
 
 from fastapi import FastAPI
+
 app = FastAPI()
 
-
-#127.0.0.1:8000/
 @app.get("/")
-async def root():
+def root():
     return {"message": "Hello World"}
 
-# 127.0.0.1:8000/teste1
+@app.get("/sum")
+def sum_numbers(a: int, b: int):
+    return {"result": a + b}
+
+@app.get("/multiply")
+def multiply(a: int, b: int):
+    return {"result": a * b}
+
 @app.get("/teste1")
-async def funcaoteste():
+def teste():
     return {"teste": "deu certo"}
