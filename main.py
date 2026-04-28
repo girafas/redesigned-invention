@@ -22,3 +22,6 @@ def teste():
 @app.get("/novo")
 async def novo():
     return {"msg": "branch testes funcionando"}
+@app.get("/teste-final")
+async def teste_final():
+    return {"msg": "funcionando PR"}
