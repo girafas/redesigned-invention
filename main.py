@@ -18,3 +18,7 @@ def multiply(a: int, b: int):
 @app.get("/teste1")
 def teste():
     return {"teste": "deu certo"}
+
+@app.get("/novo")
+async def novo():
+    return {"msg": "branch testes funcionando"}
